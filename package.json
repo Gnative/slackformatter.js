@@ -1,0 +1,29 @@
+{
+  "name": "slackformatter.js",
+  "version": "1.0",
+  "description": "JavaScript library that formats messages from the Slack API into HTML",
+  "main": "slackformatter.js",
+  "repository": {
+      "type": "git",
+      "url": "git+https://github.com/dkeeghan/slackformatter.js.git"
+  },
+  "keywords": [
+      "slack",
+      "slack-api",
+      "formatter",
+      "parser"
+  ],
+  "author": "Damian Keeghan (https://github.com/dkeeghan)",
+  "license": "BSD-3-Clause",
+  "bugs": {
+      "url": "https://github.com/dkeeghan/slackformatter.js/issues"
+  },
+  "homepage": "https://github.com/dkeeghan/slackformatter.js#readme",
+  "dependencies": {
+      "emoji-js": "^3.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

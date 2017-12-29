@@ -1,6 +1,6 @@
 {
   "name": "slackformatter.js",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "JavaScript library that formats messages from the Slack API into HTML",
   "main": "slackformatter.js",
   "repository": {

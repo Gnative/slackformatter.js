@@ -37,7 +37,8 @@
 		emojiPath: '/assets/img/emoji/',
 		channelClass: 'slack-channel',
 		userClass: 'slack-user',
-		emojiClass: 'slack-emoji'
+		emojiClass: 'slack-emoji',
+		preClass: 'is-pre'
 	}
 
 	_getUser = function(id) {
@@ -189,15 +190,13 @@
 
 	_formats.preformatted = {
 		regex: /```([^```]*?)```/g,
-		htmlTag: 'pre',
 		formatter: function(match) {
-			return _validateFormatMatch(match, _getHTML('pre', match[1]));
+			return _validateFormatMatch(match, _getHTML('code', match[1].replace(/^\n|\n$/g, ''), { class: _options.preClass }));
 		}
 	};
 
 	_formats.code = {
 		regex: /`([^`]*?)`/g,
-		htmlTag: 'code',
 		formatter: function(match) {
 			return _validateFormatMatch(match, _getHTML('code', match[1]));
 		}
@@ -262,6 +261,9 @@
 				}
 			}
 		}
+
+		// remove empty HTML tags if any
+		text = text.replace(/<(\w*)\s*[^\/>]*>\s*<\/\1>/g, '');
 
 		return text;
 	}

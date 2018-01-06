@@ -27,6 +27,7 @@ There are four options you can set for slackformatter.
 2. `channelClass` - class name for the channels. _Default `slack-channel`_
 3. `userClass` - class name for the users. _Default `slack-user`_
 4. `emojiClass` - class name for the emoji. _Default `slack-emoji`_
+4. `preClass` - class name for the pre tag. _Default `is-pre`_
 
 You can pass through an object with one or more of these options to update the settings of the plugin. Be sure to do this before anything else.
 
@@ -85,7 +86,9 @@ Once you have the custom emoji and users added, now all you need to do is call `
 
 #### Preformatted text
 
-````preformatted```` becomes `<pre>preformatted</pre>`.
+````preformatted```` becomes `<code class="is-pre">preformatted</code>`.
+
+Where `is-pre` is the class name you've specified in the options. By default it is `is-pre`.
 
 #### Links
 
